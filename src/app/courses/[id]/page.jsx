@@ -4,7 +4,8 @@ import { useParams } from "next/navigation";
 import mockCourses from "@/data/mockCourses";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from 'next/image';
+import Image from "next/image";
+
 export default function CourseDetails() {
     const { id } = useParams();
     const course = mockCourses.find((c) => c.id == id);
@@ -37,7 +38,7 @@ export default function CourseDetails() {
 
                         <Link
                             href="/student/dashboard"
-                            className="px-6 py-3 bg-linear-to-r from-purple-500 to-blue-500
+                            className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500
             rounded-xl text-white font-medium hover:opacity-80 transition"
                         >
                             Enroll Now
